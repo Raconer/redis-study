@@ -16,15 +16,21 @@ repositories {
 }
 
 dependencies {
+    // Spring Boot
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-
+    // Redis
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.springframework.session:spring-session-data-redis'
 
+    // Annotation
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // Test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-//tasks.named('test') {
-//    useJUnitPlatform()
-//}
+test {
+    useJUnitPlatform()
+}
