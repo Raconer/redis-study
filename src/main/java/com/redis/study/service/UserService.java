@@ -28,11 +28,11 @@ public class UserService {
             userName = cachedName;
         } else {
             userName = this.externalApiService.getUserName(userId);
-            userAge = this.externalApiService.getUserAge(userId);
+
             ops.set("nameKey:" + userId, userName, 5, TimeUnit.SECONDS);
-            log.info("SAVE nameKey");
         }
 
+        userAge = this.externalApiService.getUserAge(userId);
 
         return new UserProfile(userName, userAge);
     }
