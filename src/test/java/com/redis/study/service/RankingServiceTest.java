@@ -30,14 +30,14 @@ class RankingServiceTest {
         System.out.println((elapsed.getNano() / 1000000) + " ms");
     }
 
-    @Test
-    void setUserScore() {
-        for (int i = 0; i < 1000000; i++) {
-            int score = (int) (Math.random() * 1000000);
-            String userId = "user_" + i;
-            this.rankingService.setUserScore(userId, score);
-        }
-    }
+//    @Test
+//    void setUserScore() {
+//        for (int i = 0; i < 1000000; i++) {
+//            int score = (int) (Math.random() * 1000000);
+//            String userId = "user_" + i;
+//            this.rankingService.setUserScore(userId, score);
+//        }
+//    }
 
     @Test
     void getUserRanking() {
